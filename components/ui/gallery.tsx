@@ -56,13 +56,13 @@ export const PhotoGallery = ({
       scale: 1,
       // Keep the same z-index throughout animation
     }),
-    visible: (custom: { x: any; y: any; order: number }) => ({
+    visible: (custom: { x: string; y: string; order: number }) => ({
       x: custom.x,
       y: custom.y,
       rotate: 0, // No rotation
       scale: 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 70,
         damping: 12,
         mass: 1,

@@ -2,6 +2,23 @@
 import React, { useRef, useEffect, useState } from "react";
 import { RippleButton } from "@/components/ui/multi-type-ripple-buttons";
 
+export interface PricingCardProps {
+  planName: string;
+  description: string;
+  price: string;
+  features: string[];
+  buttonText: string;
+  isPopular?: boolean;
+  buttonVariant?: "primary" | "secondary";
+}
+
+export interface ModernPricingPageProps {
+  title: React.ReactNode;
+  subtitle: string;
+  plans: PricingCardProps[];
+  showAnimatedBackground?: boolean;
+}
+
 // ✅ Light theme background color
 const LIGHT_BG = [245 / 255, 245 / 255, 245 / 255];
 
@@ -206,7 +223,7 @@ export const PricingCard = ({
       </div>
       <div className="w-full mb-5 h-px bg-gray-200"></div>
       <ul className="flex flex-col gap-2 text-sm text-gray-800 mb-6 font-sans">
-        {features.map((feature, index) => (
+        {features.map((feature: string, index: number) => (
           <li key={index} className="flex items-center gap-2">
             <CheckIcon className="text-cyan-500 w-4 h-4" /> {feature}
           </li>
@@ -236,7 +253,7 @@ export const ModernPricingPage = ({
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-8 md:gap-6 justify-center items-center w-full max-w-4xl">
-          {plans.map((plan) => (
+          {plans.map((plan: PricingCardProps) => (
             <PricingCard key={plan.planName} {...plan} />
           ))}
         </div>
