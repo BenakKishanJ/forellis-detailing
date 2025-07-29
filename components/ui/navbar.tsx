@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Products", href: "#link" },
-  { name: "Designs", href: "#link" },
+  { name: "Services", href: "#link" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Pricing", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Contact", href: "#link" },
 ];
 
 export const Header = () => {
@@ -150,8 +150,8 @@ export const Header = () => {
                     isScrolled ? "lg:inline-flex" : "hidden",
                   )}
                 >
-                  <Link href="#" onClick={() => setMenuState(false)}>
-                    <span>Get Started</span>
+                  <Link href="/booking" onClick={() => setMenuState(false)}>
+                    <span>Book Now</span>
                   </Link>
                 </Button>
               </div>

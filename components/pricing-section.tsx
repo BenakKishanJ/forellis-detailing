@@ -46,7 +46,7 @@ const Pricing = () => {
     <ModernPricingPage
       title={
         <>
-          Find the <span className="text-cyan-400">Perfect Plan</span> for Your
+          Find the <span className="text-black">Perfect Plan</span> for Your
           Business
         </>
       }
