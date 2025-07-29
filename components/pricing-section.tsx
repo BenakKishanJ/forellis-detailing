@@ -1,6 +1,6 @@
 import {
   ModernPricingPage,
-  PricingCardProps,
+  PricingCard,
 } from "@/components/ui/animated-glassy-pricing";
 
 const myPricingPlans: PricingCardProps[] = [
