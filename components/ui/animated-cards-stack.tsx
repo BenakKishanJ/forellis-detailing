@@ -14,18 +14,22 @@ import {
 
 import { cn } from "@/lib/utils";
 
-const cardVariants = cva("absolute will-change-transform", {
-  variants: {
-    variant: {
-      dark: "flex size-full flex-col items-center justify-center gap-6 rounded-2xl border border-stone-700/50 bg-accent-foreground/80 p-6 backdrop-blur-md",
-      light:
-        "flex size-full flex-col items-center justify-center gap-6 rounded-2xl border  bg-accent bg-background/80 p-6 backdrop-blur-md ",
+const cardVariants = cva(
+  "absolute will-change-transform w-full max-w-xs sm:max-w-sm md:max-w-md", // ✅ Add responsive sizing
+  {
+    variants: {
+      variant: {
+        dark: "flex flex-col items-center justify-center gap-6 rounded-2xl border border-stone-700/50 bg-accent-foreground/80 p-4 sm:p-6 backdrop-blur-md",
+        light:
+          "flex flex-col items-center justify-center gap-6 rounded-2xl border bg-accent bg-background/80 p-4 sm:p-20 backdrop-blur-md",
+      },
+    },
+    defaultVariants: {
+      variant: "light",
     },
   },
-  defaultVariants: {
-    variant: "light",
-  },
-});
+);
+
 interface ReviewProps extends React.HTMLAttributes<HTMLDivElement> {
   rating: number;
   maxRating?: number;
@@ -69,7 +73,10 @@ export const ContainerScroll: React.FC<
     <ContainerScrollContext.Provider value={{ scrollYProgress }}>
       <div
         ref={scrollRef}
-        className={cn("relative min-h-svh w-full", className)}
+        className={cn(
+          "relative flex flex-wrap justify-center gap-6 px-4 sm:px-8 pt-8 sm:pt-12",
+          className,
+        )}
         style={{ perspective: "1000px", ...style }}
         {...props}
       >

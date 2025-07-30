@@ -121,15 +121,20 @@ export const PhotoGallery = ({
   ];
 
   return (
-    <div className="mt-40 relative">
+    <div className="my-20 relative px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[300px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
-      <p className="lg:text-md my-2 text-center text-xs font-light uppercase tracking-widest text-slate-600 dark:text-slate-400">
-        A Journey Through Visual Stories
-      </p>
-      <h3 className="z-20 mx-auto max-w-2xl justify-center bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text py-3 text-center text-4xl text-transparent dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text md:text-7xl">
-        Welcome to My <span className="text-rose-500"> Stories</span>
-      </h3>
-      <div className="relative mb-8 h-[350px] w-full items-center justify-center lg:flex">
+      <div className="relative text-center mb-8">
+        <p className="text-xs uppercase tracking-widest text-slate-600 dark:text-slate-400">
+          Showcase
+        </p>
+        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 bg-clip-text dark:bg-gradient-to-r dark:from-slate-100 dark:via-slate-200 dark:to-slate-100 dark:bg-clip-text">
+          <span className="text-blue-400">Stunning</span> Car Detailing Results
+        </h3>
+        <p className="mt-3 text-sm sm:text-base text-slate-600">
+          Swipe through our work – each detail job speaks for itself.
+        </p>
+      </div>
+      <div className="relative mb-8 h-[280px] sm:h-[320px] md:h-[340px] lg:h-[350px] w-full items-center justify-center lg:flex overflow-hidden">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -142,7 +147,7 @@ export const PhotoGallery = ({
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            <div className="relative h-[220px] w-[220px]">
+            <div className="relative h-[140px] w-[140px] sm:h-[180px] sm:w-[180px] md:h-[200px] md:w-[200px] lg:h-[220px] lg:w-[220px]">
               {/* Render photos in reverse order so that higher z-index photos are rendered later in the DOM */}
               {[...photos].reverse().map((photo) => (
                 <motion.div
@@ -162,6 +167,7 @@ export const PhotoGallery = ({
                     src={photo.src}
                     alt="Family photo"
                     direction={photo.direction}
+                    className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
                   />
                 </motion.div>
               ))}

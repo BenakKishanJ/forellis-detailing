@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect, useState } from "react";
 import { RippleButton } from "@/components/ui/multi-type-ripple-buttons";
+import { BgradientAnim } from "@/components/ui/soft-gradient-background-animation";
 
 export interface PricingCardProps {
   planName: string;
@@ -198,7 +199,7 @@ export const PricingCard = ({
     ${
       buttonVariant === "primary"
         ? "bg-cyan-500 hover:bg-cyan-400 text-white"
-        : "bg-gray-100 hover:bg-gray-200 text-black border border-gray-300"
+        : "bg-cyan-500 hover:bg-cyan-400 text-white"
     }
   `;
 
@@ -241,9 +242,12 @@ export const ModernPricingPage = ({
   showAnimatedBackground = true,
 }: ModernPricingPageProps) => {
   return (
-    <div className="bg-[#F5F5F5] text-black min-h-screen w-full overflow-x-hidden">
-      {showAnimatedBackground && <ShaderCanvas />}
-      <main className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    <div className="text-black min-h-screen w-full overflow-x-hidden relative">
+      {showAnimatedBackground && (
+        <BgradientAnim className="absolute inset-0 z-0" />
+      )}
+      <main className="relative w-full min-h-screen flex flex-col items-center justify-center px-4 py-8 z-10">
+        {" "}
         <div className="w-full max-w-5xl mx-auto text-center mb-14">
           <h1 className="text-5xl md:text-6xl font-semibold leading-tight tracking-tight text-black">
             {title}

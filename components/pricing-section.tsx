@@ -52,7 +52,7 @@ const Pricing = () => {
       }
       subtitle="Start for free, then grow with us. Flexible plans for projects of all sizes."
       plans={myPricingPlans}
-      showAnimatedBackground={false}
+      showAnimatedBackground={true}
     />
   );
 };

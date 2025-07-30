@@ -9,6 +9,7 @@ import {
   ReviewStars,
 } from "@/components/ui/animated-cards-stack";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Component as BgGradient } from "@/components/ui/bg-gredient";
 
 const TESTIMONIALS = [
   {
@@ -89,8 +90,9 @@ export function Testimonials() {
   const { theme } = useTheme();
 
   return (
-    <section className={getSectionClass(theme)}>
-      <div className="mx-auto max-w-4xl text-center mb-8 sm:mb-12">
+    <section className={`${getSectionClass(theme)} relative`}>
+      <BgGradient className="absolute inset-0 z-0" />
+      <div className="mx-auto max-w-4xl text-center mb-8 sm:mb-12 relative z-10">
         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold font-sans">
           Testimonials
         </h3>
@@ -99,9 +101,9 @@ export function Testimonials() {
         </p>
       </div>
 
-      <ContainerScroll className="container min-h-[250vh] sm:min-h-[300vh]">
+      <ContainerScroll className="container min-h-[250vh] sm:min-h-[300vh] relative z-10">
         <div className="sticky top-0 h-svh w-full flex items-center justify-center">
-          <CardsContainer className="mx-auto w-[280px] sm:w-[320px] lg:w-[350px] h-[350px] sm:h-[400px] lg:h-[450px]">
+          <CardsContainer className="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md h-[360px] sm:h-[420px] lg:h-[460px]">
             {TESTIMONIALS.map((testimonial, index) => (
               <CardTransformed
                 arrayLength={TESTIMONIALS.length}

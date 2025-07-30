@@ -1,7 +1,6 @@
 import React from "react";
 import { Phone, Mail, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BgradientAnim } from "@/components/ui/soft-gradient-background-animation";
 
 interface ContactWithMapProps {
   title?: string;
@@ -23,9 +22,8 @@ export const ContactWithMap = ({
   mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798881264!2d-74.2598651241819!3d40.69767006308371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b953bf497d%3A0xbc16e61e7ff0b4e2!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1627662645123!5m2!1sen!2sin",
 }: ContactWithMapProps) => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-24 bg-background relative">
-      <BgradientAnim className="absolute inset-0 z-0" />
-      <div className="container mx-auto max-w-7xl relative z-10">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-24 bg-[#f5f5f5]">
+      <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
