@@ -17,51 +17,51 @@ interface CardData {
 
 const cardsData: CardData[] = [
   {
-    id: "exterior-detailing",
+    id: "full-detail",
     front: {
       imageSrc:
         "https://images.unsplash.com/photo-1670951295478-975b208d31c2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fHdoaXRlJTIwY2FyJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww",
-      imageAlt: "Exterior Detailing",
-      title: "Exterior Detailing",
+      imageAlt: "Full Detail",
+      title: "FULL DETAIL",
       description:
-        "Our expert exterior detailing services restore your car's shine and protect its finish.",
+        "The all-in-one service to refresh your car inside and out.\nGreat for deep cleaning, shine, and a like-new feel.",
     },
     back: {
       description:
-        "We offer a comprehensive range of exterior detailing services, including hand washing, waxing, polishing, and paint protection film installation.",
-      buttonText: "Learn More",
+        "FULL DETAIL\n\nComplete Interior + Exterior Refresh\n\nGet your car looking new again with a full inside-out detail. Includes a 2-stage wash and wax, wheel and tyre care, deep interior vacuum, seat and carpet cleaning, surface treatment, interior glass polish, and deodorising. Perfect for a full reset.",
+      buttonText: "",
     },
   },
   {
-    id: "interior-detailing",
+    id: "full-interior",
     front: {
       imageSrc:
         "https://images.unsplash.com/photo-1583573278124-e8d4fd3edf3c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNhciUyMGludGVyaW9yfGVufDB8fDB8fHww",
-      imageAlt: "Interior Detailing",
-      title: "Interior Detailing",
+      imageAlt: "Full Interior",
+      title: "FULL INTERIOR",
       description:
-        "We meticulously clean and protect your car's interior, creating a fresh and comfortable space.",
+        "Thorough interior cleaning that goes beyond the surface.\nLeaves your cabin fresh, tidy, and protected.",
     },
     back: {
       description:
-        "Our interior detailing services include vacuuming, shampooing carpets, leather conditioning, and stain removal.",
-      buttonText: "Learn More",
+        "FULL INTERIOR\n\nDeep Clean for a Fresh, Tidy Cabin\n\nComplete interior refresh — seats, carpets, dash, vents, and pedals. Vacuumed, steamed, and wiped down with care. Interior glass is cleaned and the cabin is deodorised. Great for family cars, daily drivers, or post-trip resets.",
+      buttonText: "",
     },
   },
   {
-    id: "paint-correction",
+    id: "full-exterior",
     front: {
       imageSrc:
         "https://images.unsplash.com/photo-1723155016442-f6d4a70ce407?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2hpbmV5JTIwY2FyfGVufDB8fDB8fHww",
-      imageAlt: "Paint Correction",
-      title: "Paint Correction",
+      imageAlt: "Full Exterior",
+      title: "FULL EXTERIOR",
       description:
-        "Our expert paint correction services remove scratches and imperfections, restoring your car's original shine.",
+        "A complete clean and shine for your car’s exterior.\nRemoves grime, protects paint, and brings out the gloss.",
     },
     back: {
       description:
-        "We use advanced techniques and high-quality products to remove scratches, swirl marks, and other imperfections from your car's paint.",
-      buttonText: "Learn More",
+        "FULL EXTERIOR\n\nGlossy, Protected, and Road-Ready\n\nThorough exterior detail with pre-wash, iron and tar removal, wax finish, and full wheel care. Tyres dressed, glass polished, and paint protected. Ideal for keeping your car sharp and shielded from the elements.",
+      buttonText: "",
     },
   },
 ];
@@ -104,7 +104,7 @@ function GenericCardFront({ data }: GenericCardFrontProps) {
       />
       <div className="p-2">
         <h3 className="text-base font-semibold mt-2">{data.title}</h3>
-        <p className="text-[13.5px] mt-2 text-muted-foreground">
+        <p className="text-[13.5px] mt-2 text-muted-foreground whitespace-pre-line">
           {data.description}
         </p>
       </div>
@@ -119,12 +119,9 @@ interface GenericCardBackProps {
 function GenericCardBack({ data }: GenericCardBackProps) {
   return (
     <div className="flex flex-col items-center justify-center h-full w-full p-6">
-      <p className="text-[13.5px] mt-2 text-muted-foreground text-center">
+      <p className="text-[13.5px] text-white text-center whitespace-pre-line">
         {data.description}
       </p>
-      <button className="mt-6 bg-foreground text-background px-4 py-2 rounded-md text-[13.5px] w-min whitespace-nowrap h-8 flex items-center justify-center">
-        {data.buttonText}
-      </button>
     </div>
   );
 }

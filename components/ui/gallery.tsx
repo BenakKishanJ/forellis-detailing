@@ -71,12 +71,24 @@ export const PhotoGallery = ({
     }),
   };
 
+  // Get responsive positions based on screen size
+  const getResponsivePositions = () => {
+    // For mobile devices, use closer positions
+    if (typeof window !== "undefined" && window.innerWidth < 500) {
+      return ["-100px", "-50px", "0px", "50px", "100px"];
+    }
+    // For larger screens, use original positions
+    return ["-320px", "-160px", "0px", "160px", "320px"];
+  };
+
+  const positions = getResponsivePositions();
+
   // Photo positions - horizontal layout with random y offsets
   const photos = [
     {
       id: 1,
       order: 0,
-      x: "-320px",
+      x: positions[0],
       y: "15px",
       zIndex: 50, // Highest z-index (on top)
       direction: "left" as Direction,
@@ -85,7 +97,7 @@ export const PhotoGallery = ({
     {
       id: 2,
       order: 1,
-      x: "-160px",
+      x: positions[1],
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
@@ -94,7 +106,7 @@ export const PhotoGallery = ({
     {
       id: 3,
       order: 2,
-      x: "0px",
+      x: positions[2],
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
@@ -103,7 +115,7 @@ export const PhotoGallery = ({
     {
       id: 4,
       order: 3,
-      x: "160px",
+      x: positions[3],
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
@@ -112,7 +124,7 @@ export const PhotoGallery = ({
     {
       id: 5,
       order: 4,
-      x: "320px",
+      x: positions[4],
       y: "44px",
       zIndex: 10, // Lowest z-index (at bottom)
       direction: "left" as Direction,
@@ -122,7 +134,7 @@ export const PhotoGallery = ({
 
   return (
     <div className="my-20 relative px-4 sm:px-6 lg:px-8">
-      <div className="absolute inset-0 max-md:hidden top-[200px] -z-10 h-[300px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
+      <div className="absolute inset-0 top-[200px] -z-10 h-[300px] w-full bg-transparent bg-[linear-gradient(to_right,#57534e_1px,transparent_1px),linear-gradient(to_bottom,#57534e_1px,transparent_1px)] bg-[size:3rem_3rem] opacity-20 [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#a8a29e_1px,transparent_1px),linear-gradient(to_bottom,#a8a29e_1px,transparent_1px)]"></div>
       <div className="relative text-center mb-8">
         <p className="text-xs uppercase tracking-widest text-slate-600 dark:text-slate-400">
           Showcase
@@ -134,7 +146,7 @@ export const PhotoGallery = ({
           Swipe through our work – each detail job speaks for itself.
         </p>
       </div>
-      <div className="relative mb-8 h-[280px] sm:h-[320px] md:h-[340px] lg:h-[350px] w-full items-center justify-center lg:flex overflow-hidden">
+      <div className="relative mb-8 h-[180px] sm:h-[320px] md:h-[340px] lg:h-[350px] w-full items-center justify-center lg:flex overflow-hidden">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -147,7 +159,7 @@ export const PhotoGallery = ({
             initial="hidden"
             animate={isLoaded ? "visible" : "hidden"}
           >
-            <div className="relative h-[140px] w-[140px] sm:h-[180px] sm:w-[180px] md:h-[200px] md:w-[200px] lg:h-[220px] lg:w-[220px]">
+            <div className="relative h-[100px] w-[100px] sm:h-[180px] sm:w-[180px] md:h-[200px] md:w-[200px] lg:h-[220px] lg:w-[220px]">
               {/* Render photos in reverse order so that higher z-index photos are rendered later in the DOM */}
               {[...photos].reverse().map((photo) => (
                 <motion.div
@@ -162,12 +174,12 @@ export const PhotoGallery = ({
                   }}
                 >
                   <Photo
-                    width={220}
-                    height={220}
+                    // width={100}
+                    // height={100}
                     src={photo.src}
                     alt="Family photo"
                     direction={photo.direction}
-                    className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
+                    className="w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
                   />
                 </motion.div>
               ))}
@@ -205,16 +217,12 @@ export const Photo = ({
   alt,
   className,
   direction,
-  width,
-  height,
   ...props
 }: {
   src: string;
   alt: string;
   className?: string;
   direction?: Direction;
-  width: number;
-  height: number;
 }) => {
   const [rotation, setRotation] = useState<number>(0);
   const x = useMotionValue(200);
@@ -258,8 +266,6 @@ export const Photo = ({
       initial={{ rotate: 0 }}
       animate={{ rotate: rotation }}
       style={{
-        width,
-        height,
         perspective: 400,
         transform: `rotate(0deg) rotateX(0deg) rotateY(0deg)`,
         zIndex: 1,
@@ -279,8 +285,9 @@ export const Photo = ({
     >
       <div className="relative h-full w-full overflow-hidden rounded-3xl shadow-sm">
         <MotionImage
-          className={cn("rounded-3xl  object-cover")}
-          fill
+          className={cn("rounded-3xl object-cover w-full h-full")}
+          width={220}
+          height={220}
           src={src}
           alt={alt}
           {...props}

@@ -28,7 +28,7 @@ export const Header = () => {
     <header>
       <nav
         data-state={menuState && "active"}
-        className="fixed left-0 top-0 w-full z-50 px-2 sm:px-4"
+        className="fixed left-0 top-0 w-full z-100 px-2 sm:px-4"
       >
         <div
           className={cn(
