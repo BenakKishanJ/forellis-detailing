@@ -89,9 +89,14 @@ export default function Footer() {
                   width={70}
                   height={70}
                 />
-                <p className="font-bold text-xl tracking-tighter">
-                  Forelli's Wash <br /> & Detailing
-                </p>
+                <div className="font-bold text-xs sm:text-sm lg:text-base tracking-tighter font-sans leading-tight min-w-0">
+                  <div className="whitespace-nowrap text-ellipsis overflow-hidden">
+                    Forelli's
+                  </div>
+                  <div className="text-[9px] sm:text-xs lg:text-sm text-muted-foreground whitespace-nowrap">
+                    Wash & Detail
+                  </div>
+                </div>
               </Link>
             </div>
             <p className="text-foreground/60 mb-6">

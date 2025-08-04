@@ -51,11 +51,14 @@ export const Header = () => {
                   height={50}
                   className="sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px]"
                 />
-                <p className="font-bold text-sm sm:text-base lg:text-xl tracking-tighter font-sans">
-                  Forelli's Wash <br className="hidden sm:block" />
-                  <span className="sm:hidden"> & </span>
-                  <span className="hidden sm:inline">and </span>Detailing
-                </p>
+                <div className="font-bold text-xs sm:text-sm lg:text-base tracking-tighter font-sans leading-tight min-w-0">
+                  <div className="whitespace-nowrap text-ellipsis overflow-hidden">
+                    Forelli's
+                  </div>
+                  <div className="text-[9px] sm:text-xs lg:text-sm text-muted-foreground whitespace-nowrap">
+                    Wash & Detail
+                  </div>
+                </div>
               </Link>
 
               <button
