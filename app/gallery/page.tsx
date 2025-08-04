@@ -3,71 +3,35 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Gallery | Elite Detailing",
-  description: "See our premium detailing work on cars, bikes, and boats",
+  description:
+    "See our premium detailing work on interiors, exteriors, and rims",
 };
 
 export default function GalleryPage() {
   const gallerySections = [
     {
-      title: "Ceramic Coated Cars",
-      description: "Showroom-quality finishes with long-lasting protection",
-      images: [
-        "/benz2.jpeg",
-        "/benz1.png",
-        "/benz3.jpg",
-        "/bmw1.jpg",
-        "/bmw2.jpg",
-        "/bmw3.jpg",
-        "/rr.jpg",
-        "/mustang1.jpg",
-        "/mustang2.jpg",
-        "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-        "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ],
-    },
-    {
-      title: "Paint Correction Masters",
-      description: "Before and after transformations of damaged paintwork",
-      images: [
-        "/ford3.jpg",
-        "/ford1.jpg",
-        "/ford2.jpg",
-        "/jeep1.jpg",
-        "/jeep2.jpg",
-        "/jeep3.jpg",
-        "/jeep4.jpg",
-        "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-      ],
-    },
-    {
-      title: "Motorcycle Detailing",
-      description: "Precision cleaning and protection for bikes",
-      images: [
-        "https://images.unsplash.com/photo-1667320831760-a68cb9150ca7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1710773172327-0a685000b148?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "https://images.unsplash.com/photo-1726663780295-89be7a1d0bd9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      ],
-    },
-    {
-      title: "Luxury Interior Detailing",
+      title: "Interior",
       description: "Showroom-fresh interiors with ceramic protection",
-      images: [
-        "/rr_interior.jpg",
-        "https://images.unsplash.com/photo-1599912027667-755b68b4dd3b?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwY2FyJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D",
-        "https://images.unsplash.com/photo-1704932500000-17b8445307d1?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bHV4dXJ5JTIwY2FyJTIwaW50ZXJpb3J8ZW58MHx8MHx8fDA%3D",
-      ],
+      images: Array.from(
+        { length: 10 },
+        (_, i) => `/gallery/interior/int${i + 1}.jpg`,
+      ),
     },
     {
-      title: "Boat Detailing",
-      description: "Our experties also extends to Boats",
-      images: [
-        "/boat1.jpg",
-        "/boat2.jpg",
-        "/boat3.jpg",
-        "/boat4.jpg",
-        "/boat5.jpg",
-        "/boat6.jpg",
-      ],
+      title: "Exterior",
+      description: "Sleek and glossy finishes with long-lasting protection",
+      images: Array.from(
+        { length: 11 },
+        (_, i) => `/gallery/exterior/ext${i + 1}.jpg`,
+      ),
+    },
+    {
+      title: "Rim",
+      description: "Precision-cleaned rims for that perfect finish",
+      images: Array.from(
+        { length: 6 },
+        (_, i) => `/gallery/rim/rim${i + 1}.jpg`,
+      ),
     },
   ];
 
