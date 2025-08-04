@@ -75,7 +75,7 @@ function Hero() {
               <span>Version of Your Car</span>
             </h1>
 
-            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-4 max-w-xl mx-auto lg:mx-0">
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mt-4 max-w-xl mx-auto lg:mx-0 text-left">
               Life leaves its mark — dirt, dust, spills, and scratches. Our
               detailing service is here to reverse that. With a focus on both
               exterior shine and interior freshness, we bring your vehicle back

@@ -179,7 +179,7 @@ export const PhotoGallery = ({
                     src={photo.src}
                     alt="Family photo"
                     direction={photo.direction}
-                    className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
+                    className="w-[120px] h-[120px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
                   />
                 </motion.div>
               ))}
