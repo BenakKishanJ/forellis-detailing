@@ -146,7 +146,7 @@ const testimonials = [
   {
     tempId: 16,
     testimonial:
-      "Super happy with the service. My car looks brand new. Will be recommending to all my mates.",
+      "My car looks brand new. Will be recommending to all my mates.",
     by: "Lachie, Electrician in Canberra",
     imgSrc: "https://i.pravatar.cc/150?img=17",
     rating: 5,
