@@ -3,7 +3,7 @@
 import { Ref, forwardRef, useState, useEffect } from "react";
 import Image, { ImageProps } from "next/image";
 import { motion, useMotionValue } from "framer-motion";
-
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -75,7 +75,7 @@ export const PhotoGallery = ({
   const getResponsivePositions = () => {
     // For mobile devices, use closer positions
     if (typeof window !== "undefined" && window.innerWidth < 500) {
-      return ["-100px", "-50px", "0px", "50px", "100px"];
+      return ["-160px", "-80px", "0px", "80px", "160px"];
     }
     // For larger screens, use original positions
     return ["-320px", "-160px", "0px", "160px", "320px"];
@@ -92,7 +92,7 @@ export const PhotoGallery = ({
       y: "15px",
       zIndex: 50, // Highest z-index (on top)
       direction: "left" as Direction,
-      src: "/gallery/exterior/ext1.jpg",
+      src: "/gallery/exterior/ext4.jpg",
     },
     {
       id: 2,
@@ -101,7 +101,7 @@ export const PhotoGallery = ({
       y: "32px",
       zIndex: 40,
       direction: "left" as Direction,
-      src: "/gallery/exterior/ext3.jpg",
+      src: "/gallery/exterior/ext11.jpg",
     },
     {
       id: 3,
@@ -110,7 +110,7 @@ export const PhotoGallery = ({
       y: "8px",
       zIndex: 30,
       direction: "right" as Direction,
-      src: "/gallery/exterior/ext4.jpg",
+      src: "/gallery/exterior/ext1.jpg",
     },
     {
       id: 4,
@@ -119,7 +119,7 @@ export const PhotoGallery = ({
       y: "22px",
       zIndex: 20,
       direction: "right" as Direction,
-      src: "/gallery/exterior/ext9.jpg",
+      src: "/gallery/exterior/ext3.jpg",
     },
     {
       id: 5,
@@ -128,7 +128,7 @@ export const PhotoGallery = ({
       y: "44px",
       zIndex: 10, // Lowest z-index (at bottom)
       direction: "left" as Direction,
-      src: "/gallery/exterior/ext11.jpg",
+      src: "/gallery/exterior/ext9.jpg",
     },
   ];
 
@@ -146,7 +146,7 @@ export const PhotoGallery = ({
           Swipe through our work – each detail job speaks for itself.
         </p>
       </div>
-      <div className="relative mb-8 h-[180px] sm:h-[320px] md:h-[340px] lg:h-[350px] w-full items-center justify-center lg:flex overflow-hidden">
+      <div className="relative mb-8 h-[200px] sm:h-[320px] md:h-[340px] lg:h-[350px] w-full items-center justify-center lg:flex overflow-hidden">
         <motion.div
           className="relative mx-auto flex w-full max-w-7xl justify-center"
           initial={{ opacity: 0 }}
@@ -179,7 +179,7 @@ export const PhotoGallery = ({
                     src={photo.src}
                     alt="Family photo"
                     direction={photo.direction}
-                    className="w-[100px] h-[100px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
+                    className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] lg:w-[220px] lg:h-[220px]"
                   />
                 </motion.div>
               ))}
@@ -188,7 +188,9 @@ export const PhotoGallery = ({
         </motion.div>
       </div>
       <div className="flex w-full justify-center">
-        <Button>View All Results</Button>
+        <Link href="/gallery">
+          <Button>View All Results</Button>
+        </Link>
       </div>
     </div>
   );
