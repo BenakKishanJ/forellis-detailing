@@ -1,42 +1,37 @@
 "use client";
 
-import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Instagram, Facebook, Twitter, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const footerColumns = [
   {
-    title: "Solutions",
+    title: "Services",
     links: [
-      "Business Automation",
-      "Cloud Services",
-      "Analytics",
-      "Integrations",
-      "Support",
+      "Full Detail",
+      "Interior Detail",
+      "Exterior Detail",
+      "Ceramic Coating",
+      "Paint Correction",
     ],
   },
   {
-    title: "Resources",
-    links: ["Documentation", "Case Studies", "Blog", "Webinars", "Community"],
+    title: "About",
+    links: ["Our Team", "Location", "Reviews", "FAQ"],
   },
   {
-    title: "Company",
-    links: ["About Us", "Careers", "Contact", "Partners", "Press"],
+    title: "Contact",
+    links: ["Book Now", "Pricing", "Hours", "Directions"],
   },
 ];
 
-const legalLinks = [
-  "Terms of Service",
-  "Privacy Policy",
-  "Cookie Settings",
-  "Accessibility",
-];
+const legalLinks = ["Terms of Service", "Privacy Policy"];
 
 const socialIcons = [
   { icon: <Instagram className="h-5 w-5" />, href: "#" },
-  { icon: <Twitter className="h-5 w-5" />, href: "#" },
-  { icon: <Linkedin className="h-5 w-5" />, href: "#" },
-  { icon: <Youtube className="h-5 w-5" />, href: "#" },
+  { icon: <Facebook className="h-5 w-5" />, href: "#" },
+  { icon: <Phone className="h-5 w-5" />, href: "tel:+1234567890" },
+  { icon: <MapPin className="h-5 w-5" />, href: "#location" },
 ];
 
 export default function Footer() {
@@ -95,14 +90,13 @@ export default function Footer() {
                   height={70}
                 />
                 <p className="font-bold text-xl tracking-tighter">
-                  {" "}
-                  Forelli's Wash <br /> and Detailing
+                  Forelli's Wash <br /> & Detailing
                 </p>
               </Link>
             </div>
             <p className="text-foreground/60 mb-6">
-              Empowering businesses with reliable, scalable, and innovative
-              solutions.
+              Premium car care services with attention to detail and customer
+              satisfaction.
             </p>
             <div className="flex space-x-4">
               {socialIcons.map((item, i) => (
@@ -136,7 +130,8 @@ export default function Footer() {
         </div>
         <div className="border-foreground/10 flex flex-col items-center justify-between border-t pt-8 md:flex-row">
           <p className="text-foreground/60 mb-4 text-sm md:mb-0">
-            © 2023 Acme Inc. All rights reserved.
+            © {new Date().getFullYear()} Forelli's Wash & Detailing. All rights
+            reserved.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             {legalLinks.map((text) => (

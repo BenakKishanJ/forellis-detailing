@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Hero } from "@/components/ui/animated-hero";
 import Features from "@/components/features-section";
 // import { Pricing } from "@/components/pricing-section";

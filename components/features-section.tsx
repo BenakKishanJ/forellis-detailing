@@ -10,7 +10,9 @@ interface CardData {
     description: string;
   };
   back: {
-    description: string;
+    heading: string;
+    subheading?: string;
+    body: string;
     buttonText: string;
   };
 }
@@ -27,8 +29,9 @@ const cardsData: CardData[] = [
         "The all-in-one service to refresh your car inside and out.\nGreat for deep cleaning, shine, and a like-new feel.",
     },
     back: {
-      description:
-        "FULL DETAIL\n\nComplete Interior + Exterior Refresh\n\nGet your car looking new again with a full inside-out detail. Includes a 2-stage wash and wax, wheel and tyre care, deep interior vacuum, seat and carpet cleaning, surface treatment, interior glass polish, and deodorising. Perfect for a full reset.",
+      heading: "FULL DETAIL",
+      subheading: "Complete Interior + Exterior Refresh",
+      body: "Get your car looking new again with a full inside-out detail. Includes a 2-stage wash and wax, wheel and tyre care, deep interior vacuum, seat and carpet cleaning, surface treatment, interior glass polish, and deodorising. Perfect for a full reset.",
       buttonText: "",
     },
   },
@@ -43,8 +46,9 @@ const cardsData: CardData[] = [
         "Thorough interior cleaning that goes beyond the surface.\nLeaves your cabin fresh, tidy, and protected.",
     },
     back: {
-      description:
-        "FULL INTERIOR\n\nDeep Clean for a Fresh, Tidy Cabin\n\nComplete interior refresh — seats, carpets, dash, vents, and pedals. Vacuumed, steamed, and wiped down with care. Interior glass is cleaned and the cabin is deodorised. Great for family cars, daily drivers, or post-trip resets.",
+      heading: "FULL INTERIOR",
+      subheading: "Deep Clean for a Fresh, Tidy Cabin",
+      body: "Complete interior refresh — seats, carpets, dash, vents, and pedals. Vacuumed, steamed, and wiped down with care. Interior glass is cleaned and the cabin is deodorised. Great for family cars, daily drivers, or post-trip resets.",
       buttonText: "",
     },
   },
@@ -59,8 +63,9 @@ const cardsData: CardData[] = [
         "A complete clean and shine for your car’s exterior.\nRemoves grime, protects paint, and brings out the gloss.",
     },
     back: {
-      description:
-        "FULL EXTERIOR\n\nGlossy, Protected, and Road-Ready\n\nThorough exterior detail with pre-wash, iron and tar removal, wax finish, and full wheel care. Tyres dressed, glass polished, and paint protected. Ideal for keeping your car sharp and shielded from the elements.",
+      heading: "FULL EXTERIOR",
+      subheading: "Glossy, Protected, and Road-Ready",
+      body: "Thorough exterior detail with pre-wash, iron and tar removal, wax finish, and full wheel care. Tyres dressed, glass polished, and paint protected. Ideal for keeping your car sharp and shielded from the elements.",
       buttonText: "",
     },
   },
@@ -119,8 +124,16 @@ interface GenericCardBackProps {
 function GenericCardBack({ data }: GenericCardBackProps) {
   return (
     <div className="flex flex-col items-center justify-center h-full w-full p-6">
-      <p className="text-[13.5px] text-white text-center whitespace-pre-line">
-        {data.description}
+      <h3 className="text-lg font-semibold text-white text-center">
+        {data.heading}
+      </h3>
+      {data.subheading && (
+        <p className="text-sm text-white/70 text-center mt-2">
+          {data.subheading}
+        </p>
+      )}
+      <p className="text-[13.5px] text-white text-left whitespace-pre-line mt-2">
+        {data.body}
       </p>
     </div>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Check, MoveRight, PhoneCall } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -11,7 +12,7 @@ import { Button } from "@/components/ui/button";
 
 function Pricing() {
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div className="w-full py-20 lg:py-30">
       <div className="container mx-auto">
         <div className="flex text-center justify-center items-center gap-4 flex-col">
           <Badge>Pricing</Badge>
@@ -30,11 +31,11 @@ function Pricing() {
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
-                    Full Interior
+                    Interior Detailing
                   </span>
                 </CardTitle>
                 <CardDescription>
-                  Deep clean & refresh from the inside out.
+                  Revitalize your car's interior with our deep cleaning service.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col gap-8 flex-grow">
@@ -61,9 +62,11 @@ function Pricing() {
                   ))}
                 </div>
                 <div className="mt-auto pt-4">
-                  <Button variant="outline" className="gap-4 w-full">
-                    Sign up today <MoveRight className="w-4 h-4" />
-                  </Button>
+                  <Link href="/booking">
+                    <Button variant="outline" className="gap-4 w-full">
+                      Book Now <MoveRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -107,9 +110,11 @@ function Pricing() {
                   ))}
                 </div>
                 <div className="mt-auto pt-4">
-                  <Button className="gap-4 w-full">
-                    Sign up today <MoveRight className="w-4 h-4" />
-                  </Button>
+                  <Link href="/booking">
+                    <Button className="gap-4 w-full">
+                      Book Now <MoveRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -119,11 +124,11 @@ function Pricing() {
               <CardHeader>
                 <CardTitle>
                   <span className="flex flex-row gap-4 items-center font-normal">
-                    Full Exterior
+                    Exterior Detailing
                   </span>
                 </CardTitle>
                 <CardDescription>
-                  For a flawless, protected exterior finish.
+                  Achieve a stunning, protected finish for your vehicle.
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col gap-8 flex-grow">
@@ -150,9 +155,11 @@ function Pricing() {
                   ))}
                 </div>
                 <div className="mt-auto pt-4">
-                  <Button variant="outline" className="gap-4 w-full">
-                    Book a meeting <PhoneCall className="w-4 h-4" />
-                  </Button>
+                  <Link href="/booking">
+                    <Button variant="outline" className="gap-4 w-full">
+                      Book Now <MoveRight className="w-4 h-4" />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

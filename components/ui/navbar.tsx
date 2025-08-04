@@ -117,39 +117,7 @@ export const Header = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-2 sm:space-y-0 md:w-fit font-sans">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="sm"
-                  className={cn(
-                    "w-full sm:w-auto text-sm",
-                    isScrolled && "lg:hidden",
-                  )}
-                >
-                  <Link href="#" onClick={() => setMenuState(false)}>
-                    <span>Login</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(
-                    "w-full sm:w-auto text-sm",
-                    isScrolled && "lg:hidden",
-                  )}
-                >
-                  <Link href="#" onClick={() => setMenuState(false)}>
-                    <span>Sign Up</span>
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(
-                    "w-full sm:w-auto text-sm",
-                    isScrolled ? "lg:inline-flex" : "hidden",
-                  )}
-                >
+                <Button asChild size="sm" className="w-full sm:w-auto text-sm">
                   <Link href="/booking" onClick={() => setMenuState(false)}>
                     <span>Book Now</span>
                   </Link>

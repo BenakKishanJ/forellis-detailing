@@ -15,11 +15,11 @@ interface ContactWithMapProps {
 export const ContactWithMap = ({
   title = "Contact Us",
   description = "We are available for questions, feedback, or collaboration opportunities. Let us know how we can help!",
-  phone = "(123) 34567890",
-  email = "email@example.com",
-  web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" },
-  address = "123 Main Street, New York, NY 10001, USA",
-  mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2798881264!2d-74.2598651241819!3d40.69767006308371!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b953bf497d%3A0xbc16e61e7ff0b4e2!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1627662645123!5m2!1sen!2sin",
+  phone = "+61 411 479 468",
+  email = "forellis@gmail.com",
+  // web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" },
+  address = "Clayton Ct Springvale South VIC 3172, Australia",
+  mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12580.625610749405!2d145.1291210240313!3d-37.973479158545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61350b6b490e1%3A0x4a6c2f6eb455c6f2!2s2%20Jaffna%20Pl%2C%20Springvale%20South%20VIC%203172%2C%20Australia!5e0!3m2!1sen!2sin!4v1754160667349!5m2!1sen!2sin",
 }: ContactWithMapProps) => {
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-24 bg-[#f5f5f5]">
