@@ -5,6 +5,21 @@ import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+  const phoneNumber = "+61123456789"; // Replace with your actual number
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+    };
+    checkMobile();
+  }, []);
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(phoneNumber).then(() => {
+      alert("Phone number copied to clipboard!");
+    });
+  };
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
     () => [
@@ -68,12 +83,27 @@ function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center lg:justify-start">
-              <Button size="lg" variant="outline" className="gap-2">
-                Jump on a call <PhoneCall className="w-4 h-4" />
-              </Button>
-              <Button size="lg" className="gap-2">
-                Sign up here <MoveRight className="w-4 h-4" />
-              </Button>
+              {isMobile ? (
+                <a href={`tel:${phoneNumber}`}>
+                  <Button size="lg" variant="outline" className="gap-2">
+                    Jump on a call <PhoneCall className="w-4 h-4" />
+                  </Button>
+                </a>
+              ) : (
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="gap-2"
+                  onClick={handleCopyPhone}
+                >
+                  Jump on a call <PhoneCall className="w-4 h-4" />
+                </Button>
+              )}
+              <a href="/booking">
+                <Button size="lg" className="gap-2">
+                  Sign up here <MoveRight className="w-4 h-4" />
+                </Button>
+              </a>{" "}
             </div>
           </div>
 

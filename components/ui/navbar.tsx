@@ -7,10 +7,10 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Services", href: "#link" },
+  { name: "Services", href: "/#services" },
   { name: "Gallery", href: "/gallery" },
-  { name: "Pricing", href: "#link" },
-  { name: "Contact", href: "#link" },
+  { name: "Pricing", href: "/#pricing" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export const Header = () => {

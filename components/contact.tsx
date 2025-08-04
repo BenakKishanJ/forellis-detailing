@@ -22,7 +22,10 @@ export const ContactWithMap = ({
   mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12580.625610749405!2d145.1291210240313!3d-37.973479158545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61350b6b490e1%3A0x4a6c2f6eb455c6f2!2s2%20Jaffna%20Pl%2C%20Springvale%20South%20VIC%203172%2C%20Australia!5e0!3m2!1sen!2sin!4v1754160667349!5m2!1sen!2sin",
 }: ContactWithMapProps) => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-24 bg-[#f5f5f5]">
+    <section
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-24 bg-[#f5f5f5]"
+      id="contact"
+    >
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">

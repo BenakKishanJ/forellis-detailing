@@ -73,7 +73,7 @@ const cardsData: CardData[] = [
 
 export default function FlippingCardDemo() {
   return (
-    <section className="bg-[#ddd]">
+    <section className="bg-[#ddd]" id="services">
       <div className="mx-10 pt-20">
         <h3 className="text-center text-4xl font-semibold">Our Services</h3>
         <p className="mx-auto mt-2 max-w-lg text-center text-sm sm:text-base md:text-lg">

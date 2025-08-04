@@ -242,14 +242,17 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           height: 2,
         }}
       />
-      <img
-        src={testimonial.imgSrc}
-        alt={`${testimonial.by.split(",")[0]}`}
-        className="mb-4 h-14 w-12 bg-muted object-cover object-top"
-        style={{
-          boxShadow: "3px 3px 0px hsl(var(--background))",
-        }}
-      />
+      <div className="mb-4 flex items-start justify-start gap-4">
+        <img
+          src={testimonial.imgSrc}
+          alt={`${testimonial.by.split(",")[0]}`}
+          className="h-14 w-12 bg-muted object-cover object-top"
+          style={{
+            boxShadow: "3px 3px 0px hsl(var(--background))",
+          }}
+        />
+        <div className="pt-1">{renderStars(testimonial.rating)}</div>
+      </div>
       <h3
         className={cn(
           "text-base sm:text-xl font-medium",
@@ -258,7 +261,6 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       >
         "{testimonial.testimonial}"
       </h3>
-      {renderStars(testimonial.rating)}
       <p
         className={cn(
           "absolute bottom-8 left-8 right-8 mt-2 text-sm italic",
