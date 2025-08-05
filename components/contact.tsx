@@ -19,7 +19,7 @@ export const ContactWithMap = ({
   email = "forellis@gmail.com",
   // web = { label: "shadcnblocks.com", url: "https://shadcnblocks.com" },
   address = "Clayton Ct Springvale South VIC 3172, Australia",
-  mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12580.625610749405!2d145.1291210240313!3d-37.973479158545416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad61350b6b490e1%3A0x4a6c2f6eb455c6f2!2s2%20Jaffna%20Pl%2C%20Springvale%20South%20VIC%203172%2C%20Australia!5e0!3m2!1sen!2sin!4v1754160667349!5m2!1sen!2sin",
+  mapAddress = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.2775367951083!2d145.14780638265583!3d-37.978501229829426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6134fefc444ff%3A0x90e9e9fbc8f33c43!2sSpringvale%20Rd%2FPaterson%20Rd!5e0!3m2!1sen!2sin!4v1754376224119!5m2!1sen!2sin",
 }: ContactWithMapProps) => {
   return (
     <section

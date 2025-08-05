@@ -27,15 +27,14 @@ const testimonials = [
   {
     tempId: 1,
     testimonial:
-      "The interior detail was incredible. They got rid of all the red dirt from my last camping trip. Cobber!",
+      "The interior detail was incredible. They got rid of all the red dirt from my last camping trip.",
     by: "Sheila, Teacher in Perth",
     imgSrc: "https://i.pravatar.cc/150?img=2",
     rating: 4.5,
   },
   {
     tempId: 2,
-    testimonial:
-      "These guys are fair dinkum! Best car wash I've ever had. Highly recommended for a top-notch detail.",
+    testimonial: "These guys are fair dinkum! Best car wash I've ever had.",
     by: "Mack, Cattle Farmer in Longreach",
     imgSrc: "https://i.pravatar.cc/150?img=3",
     rating: 5,
@@ -43,7 +42,7 @@ const testimonials = [
   {
     tempId: 3,
     testimonial:
-      "My Mazda hadn't been cleaned in 6 months...looked like new when I picked it up. Cheers!",
+      "My Mazda hadn't been cleaned in 6 months...looked like new when I picked it up.",
     by: "Bazza, Plumber in Sydney",
     imgSrc: "https://i.pravatar.cc/150?img=4",
     rating: 4.5,
@@ -74,7 +73,7 @@ const testimonials = [
   {
     tempId: 7,
     testimonial:
-      "My old Landcruiser got the full treatment and looks better than when I bought it. Thanks!",
+      "My old Landcruiser got the full treatment and looks better than when I bought it.",
     by: "G'Day, Miner in Broken Hill",
     imgSrc: "https://i.pravatar.cc/150?img=8",
     rating: 5,
@@ -105,8 +104,7 @@ const testimonials = [
   },
   {
     tempId: 11,
-    testimonial:
-      "Awesome job! They even got the dog hair out of the back. Will definitely be back.",
+    testimonial: "Awesome job! They even got the dog hair out of the back.",
     by: "Ange, Dog Walker in Sydney",
     imgSrc: "https://i.pravatar.cc/150?img=12",
     rating: 4.5,
@@ -169,8 +167,7 @@ const testimonials = [
   },
   {
     tempId: 19,
-    testimonial:
-      "Fantastic work, and the staff are all really friendly. Will definitely be a regular customer.",
+    testimonial: "Fantastic work, and the staff are all really friendly.",
     by: "Robbo, Teacher in Melbourne",
     imgSrc: "https://i.pravatar.cc/150?img=20",
     rating: 5,

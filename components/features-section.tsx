@@ -21,8 +21,7 @@ const cardsData: CardData[] = [
   {
     id: "full-detail",
     front: {
-      imageSrc:
-        "https://images.unsplash.com/photo-1670951295478-975b208d31c2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTF8fHdoaXRlJTIwY2FyJTIwd2FsbHBhcGVyfGVufDB8fDB8fHww",
+      imageSrc: "/gallery/exterior/feature2.jpg",
       imageAlt: "Full Detail",
       title: "FULL DETAIL",
       description:
@@ -38,8 +37,7 @@ const cardsData: CardData[] = [
   {
     id: "full-interior",
     front: {
-      imageSrc:
-        "https://images.unsplash.com/photo-1583573278124-e8d4fd3edf3c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNhciUyMGludGVyaW9yfGVufDB8fDB8fHww",
+      imageSrc: "/gallery/interior/feature.jpg",
       imageAlt: "Full Interior",
       title: "FULL INTERIOR",
       description:
@@ -55,8 +53,7 @@ const cardsData: CardData[] = [
   {
     id: "full-exterior",
     front: {
-      imageSrc:
-        "https://images.unsplash.com/photo-1723155016442-f6d4a70ce407?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2hpbmV5JTIwY2FyfGVufDB8fDB8fHww",
+      imageSrc: "/gallery/exterior/feature.jpg",
       imageAlt: "Full Exterior",
       title: "FULL EXTERIOR",
       description:

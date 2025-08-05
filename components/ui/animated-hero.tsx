@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 function Hero() {
   const [isMobile, setIsMobile] = useState(false);
-  const phoneNumber = "+61123456789"; // Replace with your actual number
+  const phoneNumber = "+61411479468"; // Replace with your actual number
 
   useEffect(() => {
     const checkMobile = () => {
@@ -62,9 +62,9 @@ function Hero() {
                       titleNumber === index
                         ? { y: 0, opacity: 1 }
                         : {
-                            y: titleNumber > index ? "-150%" : "150%",
-                            opacity: 0,
-                          }
+                          y: titleNumber > index ? "-150%" : "150%",
+                          opacity: 0,
+                        }
                     }
                     transition={{ type: "spring", stiffness: 60, damping: 15 }}
                   >
@@ -101,7 +101,7 @@ function Hero() {
               )}
               <a href="/booking">
                 <Button size="lg" className="gap-2">
-                  Sign up here <MoveRight className="w-4 h-4" />
+                  Book Now! <MoveRight className="w-4 h-4" />
                 </Button>
               </a>{" "}
             </div>

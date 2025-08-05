@@ -40,7 +40,7 @@ function Pricing() {
               </CardHeader>
               <CardContent className="flex flex-col gap-8 flex-grow">
                 <p className="flex flex-row items-center gap-2 text-xl">
-                  <span className="text-4xl">$129</span>
+                  <span className="text-3xl">$120 - $150</span>
                   <span className="text-sm text-muted-foreground">
                     {" "}
                     / service
@@ -85,7 +85,7 @@ function Pricing() {
               </CardHeader>
               <CardContent className="flex flex-col gap-8 flex-grow">
                 <p className="flex flex-row items-center gap-2 text-xl">
-                  <span className="text-4xl">$199</span>
+                  <span className="text-3xl">$120 - $250</span>
                   <span className="text-sm text-muted-foreground">
                     {" "}
                     / service
@@ -133,7 +133,7 @@ function Pricing() {
               </CardHeader>
               <CardContent className="flex flex-col gap-8 flex-grow">
                 <p className="flex flex-row items-center gap-2 text-xl">
-                  <span className="text-4xl">$109</span>
+                  <span className="text-3xl">$100 - $130</span>
                   <span className="text-sm text-muted-foreground">
                     {" "}
                     / service
