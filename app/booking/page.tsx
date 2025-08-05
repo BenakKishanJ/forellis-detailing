@@ -107,7 +107,7 @@ export default function BookingPage() {
                   className="bg-transparent border-black text-black hover:bg-black hover:text-white"
                 >
                   <a
-                    href="tel:+1234567890"
+                    href="tel:+61 411 479 468"
                     className="flex items-center justify-center gap-2"
                   >
                     <svg
@@ -131,7 +131,7 @@ export default function BookingPage() {
                   className="bg-black text-white hover:bg-gray-800"
                 >
                   <a
-                    href="mailto:info@shineautocraft.com"
+                    href="mailto:forellisdetial@gmail.com"
                     className="flex items-center justify-center gap-2"
                   >
                     <svg
