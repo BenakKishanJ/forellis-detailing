@@ -34,7 +34,7 @@ export const Header = () => {
           className={cn(
             "mx-auto mt-2 max-w-6xl px-4 sm:px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg px-4 sm:px-5 lg:px-5",
+            "bg-background/50 max-w-4xl rounded-2xl border backdrop-blur-lg px-4 sm:px-5 lg:px-5",
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-4 sm:gap-6 lg:gap-0 py-2 sm:py-3">
@@ -47,9 +47,9 @@ export const Header = () => {
                 <Image
                   src="/logo.png"
                   alt="Forelli's logo"
-                  width={50}
-                  height={50}
-                  className="sm:w-[60px] sm:h-[60px] lg:w-[70px] lg:h-[70px]"
+                  width={30}
+                  height={30}
+                  className="sm:w-[40px] sm:h-[40px] lg:w-[50px] lg:h-[50px]"
                 />
                 <div className="font-bold text-xs sm:text-sm lg:text-base tracking-tighter font-sans leading-tight min-w-0">
                   <div className="whitespace-nowrap text-ellipsis overflow-hidden">
